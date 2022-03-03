@@ -221,8 +221,8 @@
 
 		pinctrl0_dspi1: dspi1grp {
 			fsl,pins = <
-				S32_GEN1_PAD_PB6__SPI1_SOUT_OUT
-				S32_GEN1_PAD_PB5__SPI1_SIN_OUT
+				S32_GEN1_PAD_PB5__SPI1_SOUT_OUT
+				S32_GEN1_PAD_PB6__SPI1_SIN_OUT	
 				S32_GEN1_PAD_PB4__SPI1_SCK_OUT
 				S32_GEN1_PAD_PB7__SPI1_CS0_OUT
 				S32_GEN1_PAD_PB8__SPI1_CS1_OUT
@@ -231,8 +231,8 @@
 
 		pinctrl0_dspi2: dspi2grp {
 			fsl,pins = <
-				S32_GEN1_PAD_PB13__SPI2_SOUT_OUT
-				S32_GEN1_PAD_PC01__SPI2_SIN_OUT
+				S32_GEN1_PAD_PC01__SPI2_SOUT_OUT
+				S32_GEN1_PAD_PB13__SPI2_SIN_OUT	
 				S32_GEN1_PAD_PB11__SPI2_SCK_OUT
 				S32_GEN1_PAD_PB14__SPI2_CS0_OUT
 				S32_GEN1_PAD_PB15__SPI2_CS1_OUT
@@ -454,13 +454,13 @@
 
 		pinctrl1_dspi1: dspi1grp {
 			fsl,pins = <
-				S32_GEN1_PAD_PB5__SPI1_SIN_IN
+				S32_GEN1_PAD_PB6__SPI1_SIN_IN
 			>;
 		};
 
 		pinctrl1_dspi2: dspi2grp {
 			fsl,pins = <
-				S32_GEN1_PAD_PC01__SPI2_SIN_IN
+				S32_GEN1_PAD_PB13__SPI2_SIN_IN
 			>;
 		};
 
