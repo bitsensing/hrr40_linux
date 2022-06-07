@@ -281,6 +281,16 @@
 			>;
 		};
 
+		pinctrl0_phygpio2: phygpio2grp {
+			fsl,pins = <
+				S32_GEN1_PAD_PC5__PHYIRQ_IN
+				S32_GEN1_PAD_PD15__RXER_IN
+				S32_GEN1_PAD_PE00__COL_OUT
+				S32_GEN1_PAD_PE01__CRS_OUT
+				S32_GEN1_PAD_PE14__WAKE
+			>;
+		};
+
 		pinctrl_gpio0: gpiogrp0 {
 			fsl,pins = <
 				S32R45_PAD_PA_00_SIUL_GPIO0
@@ -676,15 +686,18 @@
 &gmac0 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl0_rgmii2>, <&pinctrl0_mdio2>;
-	phy-mode = "rgmii-id";
+	phy-mode = "mii";
 	phy-handle = <&gmac0_phy1>;
 	status = "okay";
+	mac-address = [01 23 45 67 89 AB];
 };
 
 &gmac0_mdio {
-	/* KSZ9031RNXCA on S32R-VNP-PROC */
+	/* NXP TJA1101 */
 	gmac0_phy1: ethernet-phy@1 {
-		reg = <1>;
+		
+		reg = <6>;
+		tja110x,refclk_in;
 	};
 };
 
