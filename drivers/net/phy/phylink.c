@@ -1000,7 +1000,7 @@ static int phylink_bringup_phy(struct phylink *pl, struct phy_device *phy,
 			     __ETHTOOL_LINK_MODE_MASK_NBITS, phy->supported,
 			     __ETHTOOL_LINK_MODE_MASK_NBITS, config.advertising,
 			     ret);
-		return ret;
+		// return ret;
 	}
 
 	phy->phylink = pl;
